@@ -1,6 +1,5 @@
 import {model} from './model';
-import getHTML from './tempates';
+import {App} from './classes/app';
 import './styles/main.css';
 
-const $site = document.querySelector('#site');
-model.forEach((block) => $site.insertAdjacentHTML('beforeend', getHTML(block)));
+new App(model).init();
